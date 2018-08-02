@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="unity-classes.unity-classes">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/unity-classes/unity-classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
