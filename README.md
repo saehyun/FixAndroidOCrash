@@ -27,6 +27,7 @@ public default void android.content.ServiceConnection.onBindingDied(android.cont
 经过分析导致此异常的原因应该是Unity在C++ native code 中通过反射的方法构造了ServiceConnection ，在Unity启动
 后绑定了某一个系统服务，Unity构造的该Connection并没有实现Android8.0以后新增的onBindingDied 方法，导致在
 Google Play Service 终止时调用onBindingDied方法出现了异常。给Unity提bug后得到如下回复：
+
 Hello,
 
 Thank you for your report.
