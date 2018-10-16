@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
 public class FixAndroidOCrash {
 
     public static boolean TryFix(boolean isShowLog) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        if (Build.VERSION.SDK_INT >= 26)
             return getRunningServiceInfo(isShowLog);
         return true;
     }
@@ -41,7 +41,7 @@ public class FixAndroidOCrash {
             servicesField.setAccessible(true);
             ArrayMap<Context, ArrayMap<ServiceConnection, Object>> mServices = null;
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            if (android.os.Build.VERSION.SDK_INT >= 19) {
                 mServices = (ArrayMap<Context, ArrayMap<ServiceConnection, Object>>) servicesField.get(packageInfo);
             }
 
