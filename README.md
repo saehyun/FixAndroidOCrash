@@ -1,3 +1,5 @@
+TEST
+
 问题描述：
 	Unity 出的Android包，只要包含<uses-permission android:name="android.permission.INTERNET" />权限
 就会在 Google Play Services 更新或者停止运行的时候触发Crash：
